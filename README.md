@@ -51,6 +51,14 @@ as a data source
                   isbn: doc.isbn,
                   author___NODE: doc.author.id,
                 }),
+                nodeCreateType: `
+                  type Book implements Node {
+                    id: ID!
+                    title: String
+                    isbn: String
+                    author: Author
+                  }
+                `
               },
               {
                 type: `Author`,
