@@ -22,7 +22,7 @@ exports.sourceNodes = async (
     report.warn(e);
     return;
   }
-  const db = firebase.database();
+  const db = firebase.firestore();
   db.settings({
     timestampsInSnapshots: true,
   });
